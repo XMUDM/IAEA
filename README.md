@@ -7,9 +7,10 @@ As the limitation of LFS, the Glove pre-trained embedding dataset can be downloa
 * Hardwares: a machine with two Intel(R) Xeon(R) CPU E5-2678 v3 @ 2.50GHz, 256 GB main memory and a GeForce RTX 2080 Ti graphics card
 * OS: Ubuntu 18.04
 * Packages:
-    * python3.6 
+    * python 3.6 
     * tensorflow 1.13.1-gpu
-    * keras 2.4.2
+    * keras 2.2.4
+    * numpy 1.16.2
 
 - Train
 ```shell script
@@ -30,12 +31,12 @@ After the above steps, data/inconsistent_weight.npy and data/inconsistent_bias.n
 * Hardwares: a machine with two Intel(R) Xeon(R) CPU E5-2678 v3 @ 2.50GHz, 256 GB main memory and a GeForce RTX 2080 Ti graphics card
 * OS: Ubuntu 18.04
 * Packages:
-    * python3.5
+    * python 3.5
     * tensorflow 1.2.1-gpu
 
 **Note**: you can use the command to start a tf1.2.1-gpu docker
 ```shell script
-docker run -itd --gpus all --name tf1.2 -v /home/dm:/workspace tensorflow/tensorflow:1.2.1-gpu-py3
+docker run -itd --gpus all --name tf1.2 -v /:/workspace tensorflow/tensorflow:1.2.1-gpu-py3
 
 docker exec -it tf1.2 /bin/bash
 ```
